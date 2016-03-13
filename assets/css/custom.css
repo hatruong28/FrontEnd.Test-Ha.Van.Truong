@@ -1,0 +1,26 @@
+
+.navbar-menus > div > button:focus {
+  color: #666; }
+
+.navbar-menus > div > button:hover {
+  color: #333; }
+  
+.bookshelf img {
+	bottom: 0;
+	margin: auto;
+	left: 50%;
+	right: 0;
+	width: 100px;
+}
+
+textarea {
+	resize: none;
+}
+
+p.pre-wrap {
+	white-space: pre-wrap;
+}
+
+h3.comment-area {
+	border-bottom: 1px solid #ededed;
+}

@@ -1,0 +1,24 @@
+<div class="user-info" ng-cloak>
+  <div class="media"> <a class="pull-left" href="#">
+    <div class="media-object border border-purple br64 bw2 p2"> <img class="br64" ng-src="{{user.avatar}}" alt="..." /> </div>
+    </a>
+    <div class="mobile-link"> <span class="glyphicons glyphicons-show_big_thumbnails"></span> </div>
+    <div class="media-body">
+      <h5 class="media-heading mt5 mbn fw700 cursor" ng-bind="user.firstName"></h5>
+      <div class="media-links fs11"><a href="" ng-click="logOut()">Sign Out</a></div>
+    </div>
+  </div>
+</div>
+<div class="user-divider"></div>
+<div class="sidebar-menu">
+  <ul class="nav">
+    <li ui-sref-active="active" ng-repeat="product in products"> 
+      <a ui-sref="home.product({productID: $index})" class="ajax-disable"> <span class="glyphicons glyphicons-inbox"></span> <span class="sidebar-title" ng-bind="::subString(product.title, 25)"></span> </a> 
+    </li>
+  </ul>
+</div>
+<script>
+  $(document).ready(function () {   
+    Core.init();
+  });
+</script>

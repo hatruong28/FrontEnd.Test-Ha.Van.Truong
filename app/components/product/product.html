@@ -1,0 +1,30 @@
+<div ng-cloak>
+	<div class="bookshelf">
+		<div class="media">
+			<div class="pull-left">
+				<img class="thumbnail" ng-src="{{::product.cover}}" />
+			</div>
+	        <div class="media-body">
+	          <h3 class="title" ng-bind="::product.title"></h3>
+			  <p class="author" ng-bind="::product.author"></p>
+			  <p class="pre-wrap" ng-bind="::product.description"></p>
+	        </div>
+	    </div>
+	</div>
+	<div>
+		<h3 class="comment-area mt15">Comments</h3>
+		<div class="media mt15" ng-repeat="comment in comments">
+			<a class="pull-left" href="#"> <img class="media-object thumbnail thumbnail-sm rounded" ng-src="{{comment.author.avatar}}" alt="..."> </a>
+	        <div class="media-body">
+	          <h5 class="media-heading mb5"><span ng-bind="comment.author.firstName"></span> - <small am-time-ago="comment.createdTime"></small></h5>
+	          <p class="text-muted pre-wrap" ng-bind="comment.content"></p>
+	        </div>
+	    </div>
+	</div>
+	<div>
+		<textarea class="form-control " msd-elastic width="100%" ng-model="commentContent" rows="1"></textarea>
+		<div class="text-right mt5">
+			<button class="btn btn-sm bg-purple2" ng-click="postComment()">Post</button>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,30 @@
+﻿<div id="main" ng-cloak>
+  	<div id="content">
+    	<div class="row mt50">
+	      	<div class="panel-bg">
+	        	<div class="panel">
+		        	<form ng-submit="login()" autocomplete="on">
+		          		<div class="panel-heading"> <span class="panel-title"> <span class="glyphicon glyphicon-lock text-purple2"></span> Login </span></div>
+		          		<div class="panel-body">
+			            	<div class="login-avatar"> <img src="assets/img/logo.png" width="150" height="54" alt="avatar" /> </div>
+			            	<div class="form-group">
+			              		<div class="input-group"> <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span> </span>
+			                		<input type="text" ng-model="user.username" class="form-control" placeholder="User Name" />
+			              		</div>
+			            	</div>
+				            <div class="form-group">
+				              	<div class="input-group"> <span class="input-group-addon"><span class="glyphicon glyphicon-link"></span> </span>
+				                	<input type="password" ng-model="user.password" class="form-control" placeholder="Password" />
+				              	</div>
+				            </div>
+			            	<div class="text-danger"><span ng-bind="message"></span></div>
+			          	</div>
+			          	<div class="panel-footer"><button type="submit" class="btn btn-sm bg-purple2 pull-right" ><i class="fa fa-home"></i> Login</button>
+			            	<div class="clearfix"></div>
+			          	</div>
+		          </form>
+	        	</div>
+	      	</div>
+    	</div>
+  	</div>
+</div>
